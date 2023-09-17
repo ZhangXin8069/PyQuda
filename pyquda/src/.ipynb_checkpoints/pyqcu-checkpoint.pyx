@@ -16,7 +16,7 @@ cdef class QcuParam:
         self.param.lattice_size = value
 
 def dslashQcu(Pointer fermion_out, Pointer fermion_in, Pointer gauge, QcuParam param, int parity):
-    qcu.dslashQcu(fermion_out.ptr, fermion_in.ptr, gauge.ptr, &param.param, parity)
+    qcu.testDslashQcu(fermion_out.ptr, fermion_in.ptr, gauge.ptr, &param.param, parity)
 
 def mpiDslashQcu(Pointer fermion_out, Pointer fermion_in, Pointer gauge, QcuParam param, int parity, QcuParam grid):
     qcu.mpiDslashQcu(fermion_out.ptr, fermion_in.ptr, gauge.ptr, &param.param, parity, &grid.param)
