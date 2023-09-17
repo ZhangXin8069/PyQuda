@@ -3543,7 +3543,7 @@ static PyObject *__pyx_pf_6pyquda_5pyqcu_8QcuParam_4__setstate_cython__(CYTHON_U
  *         self.param.lattice_size = value
  * 
  * def dslashQcu(Pointer fermion_out, Pointer fermion_in, Pointer gauge, QcuParam param, int parity):             # <<<<<<<<<<<<<<
- *     qcu.testDslashQcu(fermion_out.ptr, fermion_in.ptr, gauge.ptr, &param.param, parity)
+ *     qcu.dslashQcu(fermion_out.ptr, fermion_in.ptr, gauge.ptr, &param.param, parity)
  * 
  */
 
@@ -3719,17 +3719,17 @@ static PyObject *__pyx_pf_6pyquda_5pyqcu_dslashQcu(CYTHON_UNUSED PyObject *__pyx
   /* "pyquda/src/pyqcu.pyx":19
  * 
  * def dslashQcu(Pointer fermion_out, Pointer fermion_in, Pointer gauge, QcuParam param, int parity):
- *     qcu.testDslashQcu(fermion_out.ptr, fermion_in.ptr, gauge.ptr, &param.param, parity)             # <<<<<<<<<<<<<<
+ *     qcu.dslashQcu(fermion_out.ptr, fermion_in.ptr, gauge.ptr, &param.param, parity)             # <<<<<<<<<<<<<<
  * 
  * def mpiDslashQcu(Pointer fermion_out, Pointer fermion_in, Pointer gauge, QcuParam param, int parity, QcuParam grid):
  */
-  testDslashQcu(__pyx_v_fermion_out->ptr, __pyx_v_fermion_in->ptr, __pyx_v_gauge->ptr, (&__pyx_v_param->param), __pyx_v_parity);
+  dslashQcu(__pyx_v_fermion_out->ptr, __pyx_v_fermion_in->ptr, __pyx_v_gauge->ptr, (&__pyx_v_param->param), __pyx_v_parity);
 
   /* "pyquda/src/pyqcu.pyx":18
  *         self.param.lattice_size = value
  * 
  * def dslashQcu(Pointer fermion_out, Pointer fermion_in, Pointer gauge, QcuParam param, int parity):             # <<<<<<<<<<<<<<
- *     qcu.testDslashQcu(fermion_out.ptr, fermion_in.ptr, gauge.ptr, &param.param, parity)
+ *     qcu.dslashQcu(fermion_out.ptr, fermion_in.ptr, gauge.ptr, &param.param, parity)
  * 
  */
 
@@ -3741,7 +3741,7 @@ static PyObject *__pyx_pf_6pyquda_5pyqcu_dslashQcu(CYTHON_UNUSED PyObject *__pyx
 }
 
 /* "pyquda/src/pyqcu.pyx":21
- *     qcu.testDslashQcu(fermion_out.ptr, fermion_in.ptr, gauge.ptr, &param.param, parity)
+ *     qcu.dslashQcu(fermion_out.ptr, fermion_in.ptr, gauge.ptr, &param.param, parity)
  * 
  * def mpiDslashQcu(Pointer fermion_out, Pointer fermion_in, Pointer gauge, QcuParam param, int parity, QcuParam grid):             # <<<<<<<<<<<<<<
  *     qcu.mpiDslashQcu(fermion_out.ptr, fermion_in.ptr, gauge.ptr, &param.param, parity, &grid.param)
@@ -3943,7 +3943,7 @@ static PyObject *__pyx_pf_6pyquda_5pyqcu_2mpiDslashQcu(CYTHON_UNUSED PyObject *_
   mpiDslashQcu(__pyx_v_fermion_out->ptr, __pyx_v_fermion_in->ptr, __pyx_v_gauge->ptr, (&__pyx_v_param->param), __pyx_v_parity, (&__pyx_v_grid->param));
 
   /* "pyquda/src/pyqcu.pyx":21
- *     qcu.testDslashQcu(fermion_out.ptr, fermion_in.ptr, gauge.ptr, &param.param, parity)
+ *     qcu.dslashQcu(fermion_out.ptr, fermion_in.ptr, gauge.ptr, &param.param, parity)
  * 
  * def mpiDslashQcu(Pointer fermion_out, Pointer fermion_in, Pointer gauge, QcuParam param, int parity, QcuParam grid):             # <<<<<<<<<<<<<<
  *     qcu.mpiDslashQcu(fermion_out.ptr, fermion_in.ptr, gauge.ptr, &param.param, parity, &grid.param)
@@ -3961,7 +3961,7 @@ static PyObject *__pyx_pf_6pyquda_5pyqcu_2mpiDslashQcu(CYTHON_UNUSED PyObject *_
  *     qcu.mpiDslashQcu(fermion_out.ptr, fermion_in.ptr, gauge.ptr, &param.param, parity, &grid.param)
  * 
  * def testDslashQcu(Pointer fermion_out, Pointer fermion_in, Pointer gauge, QcuParam param, int parity):             # <<<<<<<<<<<<<<
- *     qcu.dslashQcu(fermion_out.ptr, fermion_in.ptr, gauge.ptr, &param.param, parity)
+ *     qcu.testDslashQcu(fermion_out.ptr, fermion_in.ptr, gauge.ptr, &param.param, parity)
  */
 
 /* Python wrapper */
@@ -4136,15 +4136,15 @@ static PyObject *__pyx_pf_6pyquda_5pyqcu_4testDslashQcu(CYTHON_UNUSED PyObject *
   /* "pyquda/src/pyqcu.pyx":25
  * 
  * def testDslashQcu(Pointer fermion_out, Pointer fermion_in, Pointer gauge, QcuParam param, int parity):
- *     qcu.dslashQcu(fermion_out.ptr, fermion_in.ptr, gauge.ptr, &param.param, parity)             # <<<<<<<<<<<<<<
+ *     qcu.testDslashQcu(fermion_out.ptr, fermion_in.ptr, gauge.ptr, &param.param, parity)             # <<<<<<<<<<<<<<
  */
-  dslashQcu(__pyx_v_fermion_out->ptr, __pyx_v_fermion_in->ptr, __pyx_v_gauge->ptr, (&__pyx_v_param->param), __pyx_v_parity);
+  testDslashQcu(__pyx_v_fermion_out->ptr, __pyx_v_fermion_in->ptr, __pyx_v_gauge->ptr, (&__pyx_v_param->param), __pyx_v_parity);
 
   /* "pyquda/src/pyqcu.pyx":24
  *     qcu.mpiDslashQcu(fermion_out.ptr, fermion_in.ptr, gauge.ptr, &param.param, parity, &grid.param)
  * 
  * def testDslashQcu(Pointer fermion_out, Pointer fermion_in, Pointer gauge, QcuParam param, int parity):             # <<<<<<<<<<<<<<
- *     qcu.dslashQcu(fermion_out.ptr, fermion_in.ptr, gauge.ptr, &param.param, parity)
+ *     qcu.testDslashQcu(fermion_out.ptr, fermion_in.ptr, gauge.ptr, &param.param, parity)
  */
 
   /* function exit code */
@@ -4415,7 +4415,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
  *         self.param.lattice_size = value
  * 
  * def dslashQcu(Pointer fermion_out, Pointer fermion_in, Pointer gauge, QcuParam param, int parity):             # <<<<<<<<<<<<<<
- *     qcu.testDslashQcu(fermion_out.ptr, fermion_in.ptr, gauge.ptr, &param.param, parity)
+ *     qcu.dslashQcu(fermion_out.ptr, fermion_in.ptr, gauge.ptr, &param.param, parity)
  * 
  */
   __pyx_tuple__5 = PyTuple_Pack(5, __pyx_n_s_fermion_out, __pyx_n_s_fermion_in, __pyx_n_s_gauge, __pyx_n_s_param, __pyx_n_s_parity); if (unlikely(!__pyx_tuple__5)) __PYX_ERR(1, 18, __pyx_L1_error)
@@ -4424,7 +4424,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __pyx_codeobj__6 = (PyObject*)__Pyx_PyCode_New(5, 0, 0, 5, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__5, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_pyquda_src_pyqcu_pyx, __pyx_n_s_dslashQcu, 18, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__6)) __PYX_ERR(1, 18, __pyx_L1_error)
 
   /* "pyquda/src/pyqcu.pyx":21
- *     qcu.testDslashQcu(fermion_out.ptr, fermion_in.ptr, gauge.ptr, &param.param, parity)
+ *     qcu.dslashQcu(fermion_out.ptr, fermion_in.ptr, gauge.ptr, &param.param, parity)
  * 
  * def mpiDslashQcu(Pointer fermion_out, Pointer fermion_in, Pointer gauge, QcuParam param, int parity, QcuParam grid):             # <<<<<<<<<<<<<<
  *     qcu.mpiDslashQcu(fermion_out.ptr, fermion_in.ptr, gauge.ptr, &param.param, parity, &grid.param)
@@ -4439,7 +4439,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
  *     qcu.mpiDslashQcu(fermion_out.ptr, fermion_in.ptr, gauge.ptr, &param.param, parity, &grid.param)
  * 
  * def testDslashQcu(Pointer fermion_out, Pointer fermion_in, Pointer gauge, QcuParam param, int parity):             # <<<<<<<<<<<<<<
- *     qcu.dslashQcu(fermion_out.ptr, fermion_in.ptr, gauge.ptr, &param.param, parity)
+ *     qcu.testDslashQcu(fermion_out.ptr, fermion_in.ptr, gauge.ptr, &param.param, parity)
  */
   __pyx_codeobj__9 = (PyObject*)__Pyx_PyCode_New(5, 0, 0, 5, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__5, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_pyquda_src_pyqcu_pyx, __pyx_n_s_testDslashQcu, 24, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__9)) __PYX_ERR(1, 24, __pyx_L1_error)
   __Pyx_RefNannyFinishContext();
@@ -4878,7 +4878,7 @@ if (!__Pyx_RefNanny) {
  *         self.param.lattice_size = value
  * 
  * def dslashQcu(Pointer fermion_out, Pointer fermion_in, Pointer gauge, QcuParam param, int parity):             # <<<<<<<<<<<<<<
- *     qcu.testDslashQcu(fermion_out.ptr, fermion_in.ptr, gauge.ptr, &param.param, parity)
+ *     qcu.dslashQcu(fermion_out.ptr, fermion_in.ptr, gauge.ptr, &param.param, parity)
  * 
  */
   __pyx_t_2 = __Pyx_CyFunction_New(&__pyx_mdef_6pyquda_5pyqcu_1dslashQcu, 0, __pyx_n_s_dslashQcu, NULL, __pyx_n_s_pyquda_pyqcu, __pyx_d, ((PyObject *)__pyx_codeobj__6)); if (unlikely(!__pyx_t_2)) __PYX_ERR(1, 18, __pyx_L1_error)
@@ -4887,7 +4887,7 @@ if (!__Pyx_RefNanny) {
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
   /* "pyquda/src/pyqcu.pyx":21
- *     qcu.testDslashQcu(fermion_out.ptr, fermion_in.ptr, gauge.ptr, &param.param, parity)
+ *     qcu.dslashQcu(fermion_out.ptr, fermion_in.ptr, gauge.ptr, &param.param, parity)
  * 
  * def mpiDslashQcu(Pointer fermion_out, Pointer fermion_in, Pointer gauge, QcuParam param, int parity, QcuParam grid):             # <<<<<<<<<<<<<<
  *     qcu.mpiDslashQcu(fermion_out.ptr, fermion_in.ptr, gauge.ptr, &param.param, parity, &grid.param)
@@ -4902,7 +4902,7 @@ if (!__Pyx_RefNanny) {
  *     qcu.mpiDslashQcu(fermion_out.ptr, fermion_in.ptr, gauge.ptr, &param.param, parity, &grid.param)
  * 
  * def testDslashQcu(Pointer fermion_out, Pointer fermion_in, Pointer gauge, QcuParam param, int parity):             # <<<<<<<<<<<<<<
- *     qcu.dslashQcu(fermion_out.ptr, fermion_in.ptr, gauge.ptr, &param.param, parity)
+ *     qcu.testDslashQcu(fermion_out.ptr, fermion_in.ptr, gauge.ptr, &param.param, parity)
  */
   __pyx_t_2 = __Pyx_CyFunction_New(&__pyx_mdef_6pyquda_5pyqcu_5testDslashQcu, 0, __pyx_n_s_testDslashQcu, NULL, __pyx_n_s_pyquda_pyqcu, __pyx_d, ((PyObject *)__pyx_codeobj__9)); if (unlikely(!__pyx_t_2)) __PYX_ERR(1, 24, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
